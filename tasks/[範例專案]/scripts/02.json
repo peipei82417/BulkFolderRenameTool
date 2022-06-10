@@ -1,0 +1,55 @@
+{
+  "title": "[DEMO_02]",
+  "actions": [
+    {
+      "subPath": "/子目錄04/",
+      "isLinkMode": true,
+      "isPassGraphRoot": true,
+      "renameFolderGraph": {
+        "PQR": ["STU"],
+        "STU": ["VWX"],
+        "VWX": []
+      },
+      "newFolderGraph": {
+        "123": ["456"],
+        "456": ["789"],
+        "789": []
+      }
+    },
+    {
+      "subPath": "/子目錄05/",
+      "isLinkMode": true,
+      "isPassGraphRoot": true,
+      "renameFolderGraph": {
+        "PQR": ["STU"],
+        "STU": ["VWX"],
+        "VWX": []
+      },
+      "newFolderGraph": {
+        "123": ["456"],
+        "456": ["789"],
+        "789": []
+      }
+    }
+  ],
+  "prefix": ["."],
+  "filenameExtension": [".java"],
+  "oldFolderPaths": [
+    "/子目錄04/PQR/STU/VWX",
+    "/子目錄04/PQR/STU",
+    "/子目錄04/PQR",
+    "/子目錄05/PQR/STU/VWX",
+    "/子目錄05/PQR/STU",
+    "/子目錄05/PQR"
+  ],
+  "newFolderPaths": [
+    "/子目錄04/PQR/STU/789",
+    "/子目錄04/PQR/456",
+    "/子目錄04/123",
+    "/子目錄05/PQR/STU/789",
+    "/子目錄05/PQR/456",
+    "/子目錄05/123"
+  ],
+  "oldFileContent": [".PQR.STU.VWX"],
+  "newFileContent": [".123.456.789"]
+}

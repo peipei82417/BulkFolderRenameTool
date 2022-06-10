@@ -1,0 +1,90 @@
+{
+  "title": "[DEMO_01]",
+  "actions": [
+    {
+      "subPath": "/子目錄01",
+      "isLinkMode": true,
+      "renameFolderGraph": {
+        "ABC": []
+      },
+      "newFolderGraph": {
+        "abcdef": []
+      }
+    },
+    {
+      "subPath": "/子目錄02",
+      "isLinkMode": true,
+      "renameFolderGraph": {
+        "ABC": ["DEF", "GHI"],
+        "DEF": [],
+        "GHI": ["JKL", "MNO"],
+        "JKL": [],
+        "MNO": []
+      },
+      "newFolderGraph": {
+        "abcdef": ["ghijkl", "mnopqr"],
+        "ghijkl": [],
+        "mnopqr": ["stuvwx", "yzabcd"],
+        "stuvwx": [],
+        "yzabcd": []
+      }
+    },
+    {
+      "subPath": "/子目錄03",
+      "isLinkMode": false,
+      "renameFolderGraph": {
+        "XXX": ["DEF", "GHI"],
+        "DEF": [],
+        "GHI": []
+      },
+      "newFolderGraph": {
+        "abcdef": ["ghijkl", "mnopqr"],
+        "ghijkl": [],
+        "mnopqr": []
+      }
+    }
+  ],
+  "prefix": ["."],
+  "filenameExtension": [".java"],
+  "oldFolderPaths": [
+    "/子目錄01/ABC",
+    "/子目錄02/ABC/DEF",
+    "/子目錄02/ABC/GHI/JKL",
+    "/子目錄02/ABC/GHI/MNO",
+    "/子目錄02/ABC/GHI",
+    "/子目錄02/ABC",
+    "/子目錄03/XXX/DEF",
+    "/子目錄03/XXX/GHI",
+    "/子目錄03/XXX"
+  ],
+  "newFolderPaths": [
+    "/子目錄01/abcdef",
+    "/子目錄02/ABC/ghijkl",
+    "/子目錄02/ABC/GHI/stuvwx",
+    "/子目錄02/ABC/GHI/yzabcd",
+    "/子目錄02/ABC/mnopqr",
+    "/子目錄02/abcdef",
+    "/子目錄03/XXX/ghijkl",
+    "/子目錄03/XXX/mnopqr",
+    "/子目錄03/abcdef"
+  ],
+
+  "oldFileContent": [
+    ".ABC",
+    ".ABC.DEF",
+    ".ABC.GHI.JKL",
+    ".ABC.GHI.MNO",
+    ".XXX.DEF",
+    ".XXX.GHI",
+    ".XXX"
+  ],
+  "newFileContent": [
+    ".abcdef",
+    ".abcdef.ghijkl",
+    ".abcdef.mnopqr.stuvwx",
+    ".abcdef.mnopqr.yzabcd",
+    ".abcdef.ghijkl",
+    ".abcdef.mnopqr",
+    ".abcdef"
+  ]
+}

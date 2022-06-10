@@ -1,0 +1,34 @@
+{
+  "title": "[DEMO_01]",
+  "actions": [
+    {
+      "subPath": "/子目錄01",
+      "isLinkMode": true,
+      "renameFolderGraph": {
+        "ABC": []
+      }
+    },
+    {
+      "subPath": "/子目錄02",
+      "isLinkMode": true,
+      "renameFolderGraph": {
+        "ABC": ["DEF", "GHI"],
+        "DEF": [],
+        "GHI": ["JKL", "MNO"],
+        "JKL": [],
+        "MNO": []
+      }
+    },
+    {
+      "subPath": "/子目錄03",
+      "isLinkMode": false,
+      "renameFolderGraph": {
+        "keeplive": ["DEF", "GHI"],
+        "DEF": [],
+        "GHI": []
+      }
+    }
+  ],
+  "prefix": ["."],
+  "filenameExtension": [".java"]
+}
