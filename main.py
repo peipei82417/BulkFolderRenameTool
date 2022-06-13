@@ -27,10 +27,16 @@ def main():
 
     fileOperation.main(config, scripts)
     printSuccessfulText(taskName+" 修改文件及資料夾成功")
+
     printSuccessfulText("MAIN TASK SUCCESSFUL")
+
+    printSuccessfulText("開始列印" + taskName + "報告")
+    taskManager.printCoverage(taskName, config, scripts)
+    printSuccessfulText(taskName + "報告列印成功")
 
     taskManager.runNextAction()
     printSuccessfulText("TASK FINISH")
+
 
 if __name__ == "__main__":
     main()

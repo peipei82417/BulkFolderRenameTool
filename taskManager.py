@@ -3,10 +3,11 @@
 
 import os
 import json
+import datetime
 
 
-def printWarningText(s):
-    print("\033[93m" + s + "\033[0m")
+def printWarningText(text):
+    print("\033[93;40mm" + text + "\033[0m")
 
 
 def printDict(dic):
@@ -80,3 +81,35 @@ def runNextAction():
         os.system("chmod u+x *.sh")
         os.system("./" + taskName)
         os.chdir("../")
+
+
+def printCoverage(taskName, config, scripts):
+    if not os.path.isdir("coverage"):
+        os.mkdir("coverage")
+    if not os.path.isdir("coverage/"+taskName):
+        print("自動創建coverage/"+taskName+"資料夾")
+        os.mkdir("coverage/"+taskName)
+    coverageName = config["title"]
+    if coverageName == "":
+        coverageName = input("請輸入報告名稱: ")
+    today = datetime.date.today()
+    now = datetime.datetime.now()
+    time = str(today.year) + str(today.month) + str(today.day) + \
+        "_" + str(now.hour) + str(now.minute) + str(now.second)
+    coverageName = coverageName + "_" + time
+    path = "coverage/"+taskName+"/"+coverageName
+    print("報告資料夾名稱: " + coverageName)
+    os.mkdir(path)
+    for script in scripts:
+        coverage = {
+            "dictionary": script["dictionary"],
+            "oldFileContent": script["oldFileContent"],
+            "newFileContent": script["newFileContent"],
+            "oldFolderPaths": script["oldFolderPaths"],
+            "newFolderPaths": script["newFolderPaths"]
+        }
+        with open(path+"/"+script["title"]+".json", "w") as file:
+            json.dump(coverage, file, indent=4)
+    os.system("open " + path)
+
+

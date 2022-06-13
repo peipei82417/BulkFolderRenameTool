@@ -5,8 +5,8 @@ import os
 import json
 
 
-def printWarningText(s):
-    print("\033[93m" + s + "\033[0m")
+def printWarningText(text):
+    print("\033[93;40m" + text + "\033[0m")
 
 
 def main(config, scripts):
@@ -30,7 +30,7 @@ def checkScriptPath(config, scripts):
                 printWarningText(
                     script['title'] +
                     "腳本未通過\n" +
-                    path + "\n目錄不存在, 請檢查後再繼續"
+                    root + path + "\n目錄不存在, 請檢查後再繼續"
                 )
                 return False
         for path in paths2:
@@ -38,7 +38,7 @@ def checkScriptPath(config, scripts):
                 printWarningText(
                     script['title'] +
                     "腳本未通過\n" +
-                    path + "\n目錄已存在, 請檢查後再繼續"
+                    root + path + "\n目錄已存在, 請檢查後再繼續"
                 )
                 return False
     return True
