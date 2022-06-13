@@ -57,7 +57,7 @@
 #### {00-99}.json 內"必填"參數介紹:
    1. title: string
       - 此腳本之主題/目的。  
-      - 
+     
    2. actions: Array<action>
       - action 陣列 action 介紹。  
      
@@ -100,6 +100,7 @@
      
 #### {00-99}.json 內"選填"參數介紹:
    以下將以兩兩一組做說明:
+     
    1. oldFolderPaths 與 newFolderPaths: Array<string>
       - 更名前後資料夾路徑。  
       - 在未填寫此參數的情況下
