@@ -9,18 +9,18 @@
 ## 完整介紹
 
 ### 進行專案
-1. 於 tasks 資料夾內創建專案資料夾，一個專案資料夾須包含以下內容，請參考 "[/tasks/[範例專案]](http://35.234.5.205:30000/tools/bulkfolderrenametool/-/tree/master/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D)"。
+1. 於 tasks 資料夾內創建專案資料夾，一個專案資料夾須包含以下內容，請參考 "[/tasks/[範例專案]](https://github.com/peipei82417/bulk-folder-rename-tool/tree/main/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D)"。
      - config.json - 本次修改文件的基礎設定，
-     請參考 "[/tasks/[範例專案]/config.json](http://35.234.5.205:30000/tools/bulkfolderrenametool/-/blob/master/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/config.json)". 
+     請參考 "[/tasks/[範例專案]/config.json](https://github.com/peipei82417/bulk-folder-rename-tool/blob/main/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/config.json)". 
      
      - scripts 資料夾 - 存放修改行為的所有腳本，
-     請參考 "[/tasks/[範例專案]/scripts/](http://35.234.5.205:30000/tools/bulkfolderrenametool/-/tree/master/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/scripts)"  
+     請參考 "[/tasks/[範例專案]/scripts/](https://github.com/peipei82417/bulk-folder-rename-tool/tree/main/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/scripts)"  
 
 2. 撰寫 config.json 文件  
 
      - config.json 內定義了此專案之根目錄，所有的修改行為都會在此根目錄下進行。  
 
-3. 於 scripts/內撰寫{00-99}.json 文件，{00-99}.json 會照順序依次進行，請參考 "[/tasks/[範例專案]/scripts/](http://35.234.5.205:30000/tools/bulkfolderrenametool/-/tree/master/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/scripts)"。
+3. 於 scripts/內撰寫{00-99}.json 文件，{00-99}.json 會照順序依次進行，請參考 "[/tasks/[範例專案]/scripts/](https://github.com/peipei82417/bulk-folder-rename-tool/tree/main/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/scripts)"。
 4. cd BulkFolderRenameTool  
 
 5. python3 main.py  
@@ -34,11 +34,11 @@
 2. 系統自動檢查所有設定檔與腳本  
 3. 系統根據設定檔與腳本自動生成&組合亂數與路徑
      * ex1.
-   "[/tasks/[範例專案]/scripts/01.json](http://35.234.5.205:30000/tools/bulkfolderrenametool/-/blob/master/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/scripts/01.json)" 會組合出
-   "[/tasks/[範例專案]/demo/01.json](http://35.234.5.205:30000/tools/bulkfolderrenametool/-/blob/master/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/demo/01.json)" 的結果。
+   "[/tasks/[範例專案]/scripts/01.json](https://github.com/peipei82417/bulk-folder-rename-tool/blob/main/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/scripts/01.json)" 會組合出
+   "[/tasks/[範例專案]/demo/01.json](https://github.com/peipei82417/bulk-folder-rename-tool/blob/main/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/demo/01.json)" 的結果。
      * ex2.
-   "[/tasks/[範例專案]/scripts/02.json](http://35.234.5.205:30000/tools/bulkfolderrenametool/-/blob/master/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/scripts/02.json)" 會組合出
-   "[/tasks/[範例專案]/demo/02.json](http://35.234.5.205:30000/tools/bulkfolderrenametool/-/blob/master/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/demo/02.json)" 的結果。  
+   "[/tasks/[範例專案]/scripts/02.json](https://github.com/peipei82417/bulk-folder-rename-tool/blob/main/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/scripts/02.json)" 會組合出
+   "[/tasks/[範例專案]/demo/02.json](https://github.com/peipei82417/bulk-folder-rename-tool/blob/main/tasks/%5B%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88%5D/demo/02.json)" 的結果。  
    
 4. 系統根據設組合出的結果進行文件修改與資料夾改名。  
 
