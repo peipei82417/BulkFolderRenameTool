@@ -111,5 +111,3 @@ def printCoverage(taskName, config, scripts):
         with open(path+"/"+script["title"]+".json", "w") as file:
             json.dump(coverage, file, indent=4)
     os.system("open " + path)
-
-

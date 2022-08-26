@@ -121,14 +121,14 @@ def setLinkMode(actions, strList):
     pairIdx = 0
     delIdx = []
     while actIdx < len(actions):
-        if actions[actIdx]["isLinkMode"] == False:
-            actIdx += 1
-            pairIdx += 1
-            continue
-        else:
-            p1 = pairList[pairIdx][0] + 1
-            p2 = pairList[pairIdx][1]
-            while p1 < p2:
+        p1 = pairList[pairIdx][0] + 1
+        p2 = pairList[pairIdx][1]
+        while p1 < p2:
+            if  actions[actIdx]["isLinkMode"] == False:
+                strList[p1], strList[p2] = strList[p2], strList[p1]
+                p1 += 1
+                p2 -= 1
+            else:
                 last1 = strList[p2]
                 last2 = strList[p2 - 1]
                 lastStr1 = "".join(last1)
